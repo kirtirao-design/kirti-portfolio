@@ -1,35 +1,103 @@
+/* Base Styles */
 body {
-  font-family: Arial, sans-serif;
-  max-width: 900px;
-  margin: auto;
-  padding: 20px;
-  background: #faf8f5;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  background: #fefefe;
   color: #333;
+  line-height: 1.6;
 }
 
+h1, h2, h3 {
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+p {
+  margin-bottom: 20px;
+}
+
+/* Header */
 header {
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 }
 
 header h1 {
-  font-size: 2.5rem;
+  font-size: 3rem;
+  margin-bottom: 5px;
+  letter-spacing: 1px;
+}
+
+header p {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+/* Navigation */
+nav {
+  margin-top: 15px;
 }
 
 nav a {
-  margin: 0 10px;
+  margin: 0 12px;
   text-decoration: none;
   color: #333;
+  padding-bottom: 4px;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover {
+  color: #000;
+  border-bottom: 2px solid #333;
+}
+
+/* Main Content */
+main {
+  text-align: center;
 }
 
 main img {
   max-width: 100%;
   height: auto;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
 
+/* Blockquotes for Reviews */
+blockquote {
+  font-style: italic;
+  color: #555;
+  border-left: 4px solid #ccc;
+  padding-left: 15px;
+  margin: 30px auto;
+  max-width: 700px;
+}
+
+/* Footer */
 footer {
   text-align: center;
-  margin-top: 40px;
-  font-size: 0.8rem;
-  color: #777;
+  margin-top: 80px;
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+/* Responsive for mobile */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2.2rem;
+  }
+
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  nav a {
+    margin: 8px;
+  }
 }
